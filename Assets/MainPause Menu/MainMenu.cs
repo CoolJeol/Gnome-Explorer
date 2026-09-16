@@ -3,15 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    public void Play()
     {
-        // Loads the next scene in the Build Settings queue (Index 1)
         SceneManager.LoadScene("Game");
     }
 
-    public void QuitGame()
+    public void Quit()
     {
-        Debug.Log("Player has quit the game.");
         Application.Quit();
     }
 }
