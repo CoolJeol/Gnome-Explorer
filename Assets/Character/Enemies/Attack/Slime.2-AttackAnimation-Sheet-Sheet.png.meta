@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: 9d637a810589408439769bc5b5732459
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6658695270148147606
+    second: Slime.2-AttackAnimation-Sheet-Sheet_0
+  - first:
+      213: -8564816168040046528
+    second: Slime.2-AttackAnimation-Sheet-Sheet_1
+  - first:
+      213: -7637513923473539508
+    second: Slime.2-AttackAnimation-Sheet-Sheet_2
+  - first:
+      213: -4627894225868246323
+    second: Slime.2-AttackAnimation-Sheet-Sheet_3
+  - first:
+      213: -294150286610524753
+    second: Slime.2-AttackAnimation-Sheet-Sheet_4
+  - first:
+      213: 1544411835142270831
+    second: Slime.2-AttackAnimation-Sheet-Sheet_5
+  - first:
+      213: 1492951096419088524
+    second: Slime.2-AttackAnimation-Sheet-Sheet_6
+  - first:
+      213: 7020072380888882096
+    second: Slime.2-AttackAnimation-Sheet-Sheet_7
+  - first:
+      213: 6053480596082599218
+    second: Slime.2-AttackAnimation-Sheet-Sheet_8
+  - first:
+      213: 1752700594017294305
+    second: Slime.2-AttackAnimation-Sheet-Sheet_9
+  - first:
+      213: 9201161607199454290
+    second: Slime.2-AttackAnimation-Sheet-Sheet_10
+  - first:
+      213: 5866223089921338791
+    second: Slime.2-AttackAnimation-Sheet-Sheet_11
+  - first:
+      213: 8591626257536200414
+    second: Slime.2-AttackAnimation-Sheet-Sheet_12
+  - first:
+      213: -4899328331400409710
+    second: Slime.2-AttackAnimation-Sheet-Sheet_13
+  - first:
+      213: -8896636569834777922
+    second: Slime.2-AttackAnimation-Sheet-Sheet_14
+  - first:
+      213: 95594413911221931
+    second: Slime.2-AttackAnimation-Sheet-Sheet_15
+  - first:
+      213: 6478995016456898461
+    second: Slime.2-AttackAnimation-Sheet-Sheet_16
+  - first:
+      213: 3328633093224888303
+    second: Slime.2-AttackAnimation-Sheet-Sheet_17
+  - first:
+      213: 3976139947682522290
+    second: Slime.2-AttackAnimation-Sheet-Sheet_18
+  - first:
+      213: 7292118118597977776
+    second: Slime.2-AttackAnimation-Sheet-Sheet_19
+  - first:
+      213: 2371292712842325188
+    second: Slime.2-AttackAnimation-Sheet-Sheet_20
+  - first:
+      213: 8480984741118032268
+    second: Slime.2-AttackAnimation-Sheet-Sheet_21
+  - first:
+      213: -2071329633506936394
+    second: Slime.2-AttackAnimation-Sheet-Sheet_22
+  - first:
+      213: -4787380508247500720
+    second: Slime.2-AttackAnimation-Sheet-Sheet_23
+  - first:
+      213: -1885329656923992376
+    second: Slime.2-AttackAnimation-Sheet-Sheet_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a66fe3b5eef8793a0800000000000000
+      internalID: -6658695270148147606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0406371d219a32980800000000000000
+      internalID: -8564816168040046528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e72484d89120690800000000000000
+      internalID: -7637513923473539508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2ba01a8ba66cfb0800000000000000
+      internalID: -4627894225868246323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa510007fd7faebf0800000000000000
+      internalID: -294150286610524753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f6094a16ade6510800000000000000
+      internalID: 1544411835142270831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c88f619bc1708b410800000000000000
+      internalID: 1492951096419088524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb9960f2ae4c6160800000000000000
+      internalID: 7020072380888882096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23529388788420450800000000000000
+      internalID: 6053480596082599218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7540077e7d25810800000000000000
+      internalID: 1752700594017294305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 254f51e5bb711bf70800000000000000
+      internalID: 9201161607199454290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ada4f7d1d2096150800000000000000
+      internalID: 5866223089921338791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede2d539f869b3770800000000000000
+      internalID: 8591626257536200414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d0fd027d6120cb0800000000000000
+      internalID: -4899328331400409710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb29f371d2cc88480800000000000000
+      internalID: -8896636569834777922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba6a0bbec9e935100800000000000000
+      internalID: 95594413911221931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d978079e3a30ae950800000000000000
+      internalID: 6478995016456898461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe77745992ea13e20800000000000000
+      internalID: 3328633093224888303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b46bd647361e2730800000000000000
+      internalID: 3976139947682522290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6e8372bcec23560800000000000000
+      internalID: 7292118118597977776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc607f982688e020800000000000000
+      internalID: 2371292712842325188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8939d710b282b570800000000000000
+      internalID: 8480984741118032268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b934163ca82143e0800000000000000
+      internalID: -2071329633506936394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0585749dacecf8db0800000000000000
+      internalID: -4787380508247500720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime.2-AttackAnimation-Sheet-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce498a7aa6f5d5e0800000000000000
+      internalID: -1885329656923992376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4d56a97cdf319cf46996a5fe9aa77018
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Slime.2-AttackAnimation-Sheet-Sheet_0: -6658695270148147606
+      Slime.2-AttackAnimation-Sheet-Sheet_1: -8564816168040046528
+      Slime.2-AttackAnimation-Sheet-Sheet_10: 9201161607199454290
+      Slime.2-AttackAnimation-Sheet-Sheet_11: 5866223089921338791
+      Slime.2-AttackAnimation-Sheet-Sheet_12: 8591626257536200414
+      Slime.2-AttackAnimation-Sheet-Sheet_13: -4899328331400409710
+      Slime.2-AttackAnimation-Sheet-Sheet_14: -8896636569834777922
+      Slime.2-AttackAnimation-Sheet-Sheet_15: 95594413911221931
+      Slime.2-AttackAnimation-Sheet-Sheet_16: 6478995016456898461
+      Slime.2-AttackAnimation-Sheet-Sheet_17: 3328633093224888303
+      Slime.2-AttackAnimation-Sheet-Sheet_18: 3976139947682522290
+      Slime.2-AttackAnimation-Sheet-Sheet_19: 7292118118597977776
+      Slime.2-AttackAnimation-Sheet-Sheet_2: -7637513923473539508
+      Slime.2-AttackAnimation-Sheet-Sheet_20: 2371292712842325188
+      Slime.2-AttackAnimation-Sheet-Sheet_21: 8480984741118032268
+      Slime.2-AttackAnimation-Sheet-Sheet_22: -2071329633506936394
+      Slime.2-AttackAnimation-Sheet-Sheet_23: -4787380508247500720
+      Slime.2-AttackAnimation-Sheet-Sheet_24: -1885329656923992376
+      Slime.2-AttackAnimation-Sheet-Sheet_3: -4627894225868246323
+      Slime.2-AttackAnimation-Sheet-Sheet_4: -294150286610524753
+      Slime.2-AttackAnimation-Sheet-Sheet_5: 1544411835142270831
+      Slime.2-AttackAnimation-Sheet-Sheet_6: 1492951096419088524
+      Slime.2-AttackAnimation-Sheet-Sheet_7: 7020072380888882096
+      Slime.2-AttackAnimation-Sheet-Sheet_8: 6053480596082599218
+      Slime.2-AttackAnimation-Sheet-Sheet_9: 1752700594017294305
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
