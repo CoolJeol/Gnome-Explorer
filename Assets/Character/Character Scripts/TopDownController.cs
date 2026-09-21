@@ -22,20 +22,20 @@ public class TopDownController : MonoBehaviour
         // Horizontal facing has priority while A/D are held
         if (Input.GetKey(KeyCode.A))
         {
-            Face(Vector2.left);
+            //Face(Vector2.left);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            Face(Vector2.right);
+            //Face(Vector2.right);
         }
         // Otherwise face vertically
         else if (Input.GetKey(KeyCode.W))
         {
-            Face(Vector2.up);
+            //Face(Vector2.up);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            Face(Vector2.down);
+            //Face(Vector2.down);
         }
     }
 
