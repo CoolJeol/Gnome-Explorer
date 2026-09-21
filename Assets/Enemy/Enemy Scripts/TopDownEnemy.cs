@@ -9,6 +9,8 @@ public class TopDownEnemy : MonoBehaviour
     public int damage = 10;
     public float attackCooldown = 1f;
 
+    public bool IsAttacking { get; private set; }
+
     private Transform player;
     private Rigidbody2D rb;
     private float attackTimer;
@@ -38,14 +40,21 @@ public class TopDownEnemy : MonoBehaviour
             player.position
         );
 
-        // Player is too far away
+        // Outside detection range
         if (distance > detectionRadius)
         {
             rb.linearVelocity = Vector2.zero;
             return;
         }
 
-        // Player is close enough to attack
+        // Currently attacking
+        if (IsAttacking)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
+        // In attack range
         if (distance <= attackRange)
         {
             rb.linearVelocity = Vector2.zero;
@@ -59,7 +68,7 @@ public class TopDownEnemy : MonoBehaviour
             return;
         }
 
-        // Chase the player
+        // Chase player
         Vector2 direction =
             (player.position - transform.position).normalized;
 
@@ -68,6 +77,8 @@ public class TopDownEnemy : MonoBehaviour
 
     void Attack()
     {
+        IsAttacking = true;
+
         Debug.Log("ENEMY ATTACK!");
 
         Health playerHealth = player.GetComponent<Health>();
@@ -82,15 +93,22 @@ public class TopDownEnemy : MonoBehaviour
         }
     }
 
+    public void FinishAttack()
+    {
+        IsAttacking = false;
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
+
         Gizmos.DrawWireSphere(
             transform.position,
             detectionRadius
         );
 
         Gizmos.color = Color.red;
+
         Gizmos.DrawWireSphere(
             transform.position,
             attackRange
