@@ -3,11 +3,14 @@ using System.Collections;
 
 public class Health : MonoBehaviour
 {
+    [Header("Health")]
     public int maxHealth = 100;
     public bool isPlayer = false;
 
     [Header("Respawn")]
-    public float respawnDelay = 2f;
+    public bool respawnEnemy = true;
+    public float respawnDelay = 10f;
+    public float playerRespawnDelay = 2f;
 
     [Header("Damage Blink")]
     public float blinkTime = 0.1f;
@@ -27,6 +30,11 @@ public class Health : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
+    private Collider2D col;
+    private Rigidbody2D rb;
+    private TopDownEnemy enemy;
+    private EnemyAnimation enemyAnimation;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -36,6 +44,15 @@ public class Health : MonoBehaviour
 
         if (spriteRenderer != null)
             originalColor = spriteRenderer.color;
+
+        col = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
+
+        if (!isPlayer)
+        {
+            enemy = GetComponent<TopDownEnemy>();
+            enemyAnimation = GetComponent<EnemyAnimation>();
+        }
     }
 
     void Update()
@@ -44,13 +61,13 @@ public class Health : MonoBehaviour
         if (!isPlayer)
             return;
 
-        // Already at full health
+        // Don't regenerate at full health
         if (currentHealth >= maxHealth)
             return;
 
         timeSinceDamage += Time.deltaTime;
 
-        // Wait until player has not been hurt for 5 seconds
+        // Wait until the player hasn't taken damage
         if (timeSinceDamage >= regenDelay)
         {
             regenTimer += Time.deltaTime;
@@ -58,6 +75,7 @@ public class Health : MonoBehaviour
             if (regenTimer >= regenInterval)
             {
                 regenTimer = 0f;
+
                 currentHealth += regenAmount;
 
                 if (currentHealth > maxHealth)
@@ -70,7 +88,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        // Check if player is blocking
+        // -------------------------
+        // PLAYER BLOCK
+        // -------------------------
+
         if (isPlayer)
         {
             PlayerBlock block = GetComponent<PlayerBlock>();
@@ -78,9 +99,17 @@ public class Health : MonoBehaviour
             if (block != null && block.IsBlocking)
             {
                 Debug.Log("Player blocked the attack!");
+
+                if (AudioManager.Instance != null)
+                    AudioManager.Instance.PlayPlayerBlock();
+
                 return;
             }
         }
+
+        // -------------------------
+        // DEAL DAMAGE
+        // -------------------------
 
         currentHealth -= damage;
 
@@ -88,11 +117,36 @@ public class Health : MonoBehaviour
         timeSinceDamage = 0f;
         regenTimer = 0f;
 
-        Debug.Log(gameObject.name + " took " + damage +
-                  " damage. Health: " + currentHealth);
+        Debug.Log(
+            gameObject.name +
+            " took " +
+            damage +
+            " damage. Health: " +
+            currentHealth
+        );
+
+        // -------------------------
+        // HURT SOUND
+        // -------------------------
+
+        if (AudioManager.Instance != null)
+        {
+            if (isPlayer)
+                AudioManager.Instance.PlayPlayerHurt();
+            else
+                AudioManager.Instance.PlayEnemyHurt();
+        }
+
+        // -------------------------
+        // DAMAGE BLINK
+        // -------------------------
 
         if (spriteRenderer != null)
             StartCoroutine(DamageBlink());
+
+        // -------------------------
+        // DEATH
+        // -------------------------
 
         if (currentHealth <= 0)
         {
@@ -104,19 +158,40 @@ public class Health : MonoBehaviour
     {
         for (int i = 0; i < blinkCount; i++)
         {
-            spriteRenderer.color = Color.red;
+            if (spriteRenderer != null)
+                spriteRenderer.color = Color.red;
+
             yield return new WaitForSeconds(blinkTime);
 
-            spriteRenderer.color = originalColor;
+            if (spriteRenderer != null)
+                spriteRenderer.color = originalColor;
+
             yield return new WaitForSeconds(blinkTime);
         }
     }
 
     void Die()
     {
+        // -------------------------
+        // PLAYER DEATH
+        // -------------------------
+
         if (isPlayer)
         {
-            StartCoroutine(Respawn());
+            StartCoroutine(PlayerRespawn());
+            return;
+        }
+
+        // -------------------------
+        // ENEMY DEATH
+        // -------------------------
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayEnemyDeath();
+
+        if (respawnEnemy)
+        {
+            StartCoroutine(EnemyRespawn());
         }
         else
         {
@@ -124,27 +199,22 @@ public class Health : MonoBehaviour
         }
     }
 
-    IEnumerator Respawn()
+    IEnumerator PlayerRespawn()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-
         if (rb != null)
             rb.linearVelocity = Vector2.zero;
 
         if (spriteRenderer != null)
             spriteRenderer.enabled = false;
 
-        Collider2D col = GetComponent<Collider2D>();
-
         if (col != null)
             col.enabled = false;
 
-        yield return new WaitForSeconds(respawnDelay);
+        yield return new WaitForSeconds(playerRespawnDelay);
 
         transform.position = startPosition;
         currentHealth = maxHealth;
 
-        // Reset regeneration
         timeSinceDamage = 0f;
         regenTimer = 0f;
 
@@ -158,5 +228,72 @@ public class Health : MonoBehaviour
             col.enabled = true;
 
         Debug.Log("Player respawned!");
+    }
+
+    IEnumerator EnemyRespawn()
+    {
+        // Stop enemy movement
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+
+        // Disable enemy AI
+        if (enemy != null)
+            enemy.enabled = false;
+
+        // Disable enemy animation
+        if (enemyAnimation != null)
+            enemyAnimation.enabled = false;
+
+        // Hide enemy
+        if (spriteRenderer != null)
+            spriteRenderer.enabled = false;
+
+        // Disable collider
+        if (col != null)
+            col.enabled = false;
+
+        Debug.Log(
+            gameObject.name +
+            " will respawn in " +
+            respawnDelay +
+            " seconds."
+        );
+
+        yield return new WaitForSeconds(respawnDelay);
+
+        // Move back to starting position
+        transform.position = startPosition;
+
+        // Restore health
+        currentHealth = maxHealth;
+
+        timeSinceDamage = 0f;
+        regenTimer = 0f;
+
+        // Reset sprite
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.enabled = true;
+            spriteRenderer.color = originalColor;
+        }
+
+        // Enable collider
+        if (col != null)
+            col.enabled = true;
+
+        // Enable enemy AI
+        if (enemy != null)
+            enemy.enabled = true;
+
+        // Enable enemy animation
+        if (enemyAnimation != null)
+            enemyAnimation.enabled = true;
+
+        Debug.Log(gameObject.name + " respawned!");
+    }
+
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
     }
 }

@@ -2,43 +2,129 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [Header("Audio Sources")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource SFXSource;
+    public static AudioManager Instance;
 
-    [Header("Audio Clip Player")]
-    public AudioClip[] Background;
-    public AudioClip[] PlayerAttack;
-    public AudioClip[] PlayerBlock;
-    public AudioClip[] PlayerHurt;
+    [Header("Sound Effects")]
 
-    [Header("Audio Clip Slime")]
-    public AudioClip[] SlimeEat;
-    public AudioClip[] SlimeHurt;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public AudioClip[] enemyAttackSounds;
+    public AudioClip[] enemyHurtSounds;
+    public AudioClip[] enemyDeathSounds;
+
+    public AudioClip[] playerHurtSounds;
+    public AudioClip[] playerAttackSounds;
+    public AudioClip[] playerBlockSounds;
+
+    [Header("Sound Effect Volume")]
+
+    [Range(0f, 1f)]
+    public float enemyAttackVolume = 1f;
+
+    [Range(0f, 1f)]
+    public float enemyHurtVolume = 1f;
+
+    [Range(0f, 1f)]
+    public float enemyDeathVolume = 1f;
+
+    [Range(0f, 1f)]
+    public float playerHurtVolume = 1f;
+
+    [Range(0f, 1f)]
+    public float playerAttackVolume = 1f;
+
+    [Range(0f, 1f)]
+    public float playerBlockVolume = 1f;
+
+    [Header("Background Music")]
+
+    public AudioClip backgroundMusic;
+
+    [Range(0f, 1f)]
+    public float musicVolume = 0.5f;
+
+    private AudioSource audioSource;
+    private AudioSource musicSource;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        // Sound effects
+        audioSource = GetComponent<AudioSource>();
+
+        // Music
+        musicSource = gameObject.AddComponent<AudioSource>();
+        musicSource.loop = true;
+        musicSource.playOnAwake = false;
+    }
+
     void Start()
     {
-        if (musicSource == null)
-        {
-            Debug.LogWarning("AudioManager: musicSource is not assigned in the Inspector.");
-            return;
-        }
+        PlayMusic();
+    }
 
-        if (Background == null || Background.Length == 0)
-        {
-            Debug.LogWarning("AudioManager: Background array is empty or null.");
-            return;
-        }
+    // -------------------------
+    // MUSIC
+    // -------------------------
 
-        // Use a single clip (first item). Use Random.Range(...) if you want a random track.
-        musicSource.clip = Background[0];
-        musicSource.loop = true;
+    void PlayMusic()
+    {
+        if (backgroundMusic == null)
+            return;
+
+        musicSource.clip = backgroundMusic;
+        musicSource.volume = musicVolume;
         musicSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    // -------------------------
+    // SOUND EFFECTS
+    // -------------------------
+
+    public void PlayEnemyAttack()
     {
-        
+        PlayRandom(enemyAttackSounds, enemyAttackVolume);
+    }
+
+    public void PlayEnemyHurt()
+    {
+        PlayRandom(enemyHurtSounds, enemyHurtVolume);
+    }
+
+    public void PlayEnemyDeath()
+    {
+        PlayRandom(enemyDeathSounds, enemyDeathVolume);
+    }
+
+    public void PlayPlayerHurt()
+    {
+        PlayRandom(playerHurtSounds, playerHurtVolume);
+    }
+
+    public void PlayPlayerAttack()
+    {
+        PlayRandom(playerAttackSounds, playerAttackVolume);
+    }
+
+    public void PlayPlayerBlock()
+    {
+        PlayRandom(playerBlockSounds, playerBlockVolume);
+    }
+
+    void PlayRandom(AudioClip[] sounds, float volume)
+    {
+        if (sounds == null || sounds.Length == 0)
+            return;
+
+        AudioClip sound = sounds[Random.Range(0, sounds.Length)];
+
+        audioSource.PlayOneShot(sound, volume);
     }
 }

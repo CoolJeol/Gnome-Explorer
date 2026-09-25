@@ -12,6 +12,7 @@ public class PlayerAttack : MonoBehaviour
     private float attackTimer;
     private PlayerFacing facing;
 
+
     void Start()
     {
         facing = GetComponent<PlayerFacing>();
@@ -35,6 +36,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Attack();
             attackTimer = attackCooldown;
+            AudioManager.Instance.PlayPlayerAttack();
         }
     }
 

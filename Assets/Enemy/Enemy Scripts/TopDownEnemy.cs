@@ -83,6 +83,8 @@ public class TopDownEnemy : MonoBehaviour
 
         Health playerHealth = player.GetComponent<Health>();
 
+        AudioManager.Instance.PlayEnemyAttack();
+
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(damage);
